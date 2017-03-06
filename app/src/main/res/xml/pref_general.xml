@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="General">
+        <Preference android:title="@string/pref_storage_location_label"
+                    android:key="@string/pref_storage_location_key"
+                    android:summary="[current path]" />
+        <SwitchPreference android:title="@string/pref_use_track_artwork_label"
+                          android:key="@string/pref_use_track_artwork_key"
+                          android:defaultValue="@string/pref_use_track_artwork_default"
+                          android:summary="@string/pref_use_track_artwork_summary" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Network">
+        <SwitchPreference android:title="@string/pref_only_wifi_label"
+                          android:key="@string/pref_only_wifi_key"
+                          android:defaultValue="@string/pref_only_wifi_default"
+                          android:summary="@string/pref_only_wifi_summary" />
+        <ListPreference android:title="@string/pref_download_limit_label"
+                        android:key="@string/pref_download_limit_key"
+                        android:defaultValue="@string/pref_download_limit_default"
+                        android:summary="@string/pref_download_limit_summary"
+                        android:entries="@array/pref_downloads_limit_values"
+                        android:entryValues="@array/pref_downloads_limit_values" />
+        <ListPreference android:title="@string/pref_track_sync_limit_label"
+                        android:key="@string/pref_track_sync_limit_key"
+                        android:defaultValue="@string/pref_track_sync_limit_default"
+                        android:summary="@string/pref_track_sync_limit_summary"
+                        android:entries="@array/pref_track_sync_limit_entries"
+                        android:entryValues="@array/pref_track_sync_limit_values" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Reset">
+        <Preference android:title="@string/pref_reset_database_label"
+                    android:key="@string/pref_reset_database_key"
+                    android:summary="@string/pref_reset_database_summary" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
