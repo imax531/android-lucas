@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <SwitchPreference android:title="@string/pref_sync_user_playlists_label"
+                      android:summary="@string/pref_sync_user_playlists_summary"
+                      android:key="@string/pref_sync_user_playlists_default_key"
+                      android:defaultValue="@string/pref_sync_user_playlists_default" />
+</PreferenceScreen>

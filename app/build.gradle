@@ -1,0 +1,40 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '25.0.0'
+    dexOptions {
+        maxProcessCount 2
+        javaMaxHeapSize "2g"
+    }
+    dataBinding {
+        enabled = true
+    }
+    defaultConfig {
+        applicationId "com.max.lucas"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.mockito:mockito-core:1.9.5'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:design:23.4.0'
+    compile 'com.android.support:support-v4:23.4.0'
+    compile 'com.pkmmte.view:circularimageview:1.1'
+    compile 'com.android.support:recyclerview-v7:23.4.0'
+    compile 'org.apache.directory.studio:org.apache.commons.io:2.4'
+    compile 'net.openid:appauth:0.2.0'
+}
